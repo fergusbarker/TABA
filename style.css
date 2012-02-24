@@ -1,0 +1,16 @@
+body {
+	background:url('farmer.png');
+}
+
+blockquote  {
+		color: #777;
+		width:800px;
+		margin-left:auto;
+		margin-right:auto;
+
+	}
+	p {
+		font-family: 'Fondamento', serif;
+		font:'Fondamento';
+		font-size:2.2em;
+	}
