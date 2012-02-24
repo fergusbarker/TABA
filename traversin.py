@@ -1,16 +1,21 @@
-#import sqlite3
+import csv
 
-y = open("thehobbit.txt", 'r')
+hobbit = open("thehobbit.txt", 'r')
 
-y = y.read()
+y = hobbit.read()
 
-y.split(".")
+y = y.split(".")
 
 for i in y:
 	
-    i.split(",")
-    print i
+    print i + "."
 
-y.close()
+hobbit.close()
 
+newcsv = open('sentences.csv','w')
+writer = csv.writer(newcsv, delimiter="|")
+
+writer.writerow(y)
+
+# Goonies forever
 raw_input()
