@@ -12,15 +12,20 @@
 <body>
 <blockquote>
 <p>
-"Chip the glasses and crack the plates!
-Blunt the knives and bend the forks!
-That's what Bilbo hates -
-Smash the bottles and burn the corks!
+<?php 
+	$arrCSV = array();
+	if (($handle = fopen("sentences.csv", "r")) !==FALSE) {
+ 		$key = 0;
+		while (($data = fgetcsv($handle , 0, ",")) ! ==FALSE) {
+			$c = count($data)
+			for ($x=0;$x<$c;$x++) {
+				$arrCSV[$key][$x] = $data[$x];
+			}
+		$key++
+		}
+	}
 
-Cut the cloth and tread on the fat!
-Pour the milk on the pantry floor!
-Leave the bones on the bedroom mat!
-Splash the wine on every door!"
+	?>
 </p>
 </blockquote>
 </body>
