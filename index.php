@@ -16,8 +16,8 @@
 	$arrCSV = array();
 	if (($handle = fopen("sentences.csv", "r")) !==FALSE) {
  		$key = 0;
-		while (($data = fgetcsv($handle , 0, "|")) ! ==FALSE) {
-			$c = count($data)
+		while (($data = fgetcsv($handle , 0, "|")) !==FALSE) {
+			$c = count($data);
 			for ($x=0;$x<$c;$x++) {
 				$arrCSV[$key][$x] = $data[$x];
 			}
@@ -25,8 +25,12 @@
 		}
 		fclose($handle);
 	}
-
-	?>
+?>
+<?php 
+	$max = count($arrCSV);
+	$num = rand(0,$max);
+	echo $num;
+?>
 </p>
 </blockquote>
 </body>
