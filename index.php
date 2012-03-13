@@ -31,7 +31,7 @@
 <?php 
 	$max = max(array_map('count', $arrCSV));
 	$num = rand(0,$max);
-	echo $num;
+	echo $arrCSV[0][$num];
 ?>
 </p>
 </blockquote>
