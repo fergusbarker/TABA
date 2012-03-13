@@ -23,6 +23,7 @@
 			}
 		$key++
 		}
+		fclose($handle);
 	}
 
 	?>
